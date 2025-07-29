@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="assets/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>ShoulderShot</title>
+  <link href="static/css/style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/x-icon" href="assets/images/ShoulderShot.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+
+<body>
+  <section class="section hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              <span style="background: linear-gradient(to right, red, hotpink, violet); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                ShoulderShot
+              </span>
+              : Generating Over-the-Shoulder Dialogue Videos
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">Anonymous submission</span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+
+<!-- End teaser video -->
+
+<!-- ---------------- BEGIN Showcases SECTION ------------------>
+<!-- Video carousel -->
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="container">
+      <!-- <h2 class="title is-3">Generated Over-the-Shoulder Dialogue Videos</h2> -->
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video width="750" src="assets/showcases/case3.mp4" controls></video>
+        </div>
+        <div class="item item-video2">
+          <video width="750" src="assets/showcases/case1.mp4" controls></video>
+        </div>
+        <div class="item item-video3">
+          <video width="750" src="assets/showcases/case2.mp4" controls></video>
+        </div>
+        <div class="item item-video4">
+          <video width="750" src="assets/showcases/case4.mp4" controls></video>
+        </div>
+      </div>
+      ShoulderShot generates long dialogues maintaining spatial continuity and character consistency.
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Over-the-shoulder dialogue videos are essential in films, short dramas, and advertisements, providing visual variety and enhancing viewers' emotional connection. Despite their importance, such dialogue scenes remain largely underexplored in video generation research. Key challenges involve maintaining <b>character consistency</b>, <b>spatial continuity</b>, and generating <b>long, multi-turn dialogues</b> efficiently. We introduce ShoulderShot, a framework leveraging dual-shot generation and looping video to enable extended, consistent dialogues. Our results surpass existing methods in <b>shot-reverse-shot layout</b>, <b>spatial continuity</b>, and <b>dialogue length flexibility</b>, thereby opening up new possibilities for practical dialogue video generation.
+          </p>
+          <img style="max-width: 400px; display: block; margin: 0 auto;" src="assets/figs/ots.png" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Video carousel2 -->
+<section class="section hero">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Comparing Dialogue Video Generation with MoCha</h2>
+      <!-- <h3 class="title is-4 has-text-justified" style="max-width: 1000px; display: block; margin: 0 auto;">Comparing Generated Videos</h3> -->
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Scene description</th>
+              <th style="font-size: 16px">MoCha</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <td style="font-size: 12px; width: 400px; text-align: left;">
+                A woman (Person1) with dark, shoulder-length wavy hair, fair skin tone, wearing a white blouse with red cherry patterns. She has a soft, natural expression. A man (Person2) with short dark hair, a well-groomed beard, medium to fair skin tone, wearing black sunglasses and a light grey or white t-shirt. He has a strong build and a calm demeanor.  First clip: Person1 stands in a cozy kitchen, facing slightly right, speaking warmly while preparing food on the counter. Pots and pans hang in the background. Second clip: Person2 stands on the other side of the counter, speaking to Person1.
+              </td>
+              <th><video  width="280" src="assets/showcases/mocha_case3.mp4" controls></video></th>
+              <th><video  width="280" src="assets/showcases/case3.mp4" controls></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class="item item-video2">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Scene description</th>
+              <th style="font-size: 16px">MoCha</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <td style="font-size: 12px; width: 400px; text-align: left;">
+                A man (Person1) with short, slicked-back black hair, fair skin tone, wearing a dark pinstripe suit with a white shirt and black tie. A woman (Person2) with brown hair styled in an Edwardian-era updo, fair skin tone, wearing a light blue lace dress with sheer sleeves and ornate trim. First clip: Person1 stands on the deck of a ship, facing slightly right and speaking to Person2 with a smug expression. The ocean and white columns are visible in the background. Person2 is facing away from the camera. Second clip: Person2 is seated on a wooden deck chair in the same scene, facing forward and speaking with surprise or concern. The ocean stretches behind her.
+              </td>
+              <th><video  width="280" src="assets/showcases/mocha_case1.mp4" controls></video></th>
+              <th><video  width="280" src="assets/showcases/case1.mp4" controls></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class="item item-video3">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Scene description</th>
+              <th style="font-size: 16px">MoCha</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              
+              <td style="font-size: 12px; width: 400px; text-align: left;">
+                A woman(Person1) with shoulder-length black hair, light skin tone, wearing a green trench coat. A man(Person2) with short brown hair, medium skin tone, wearing a black hoodie. First clip: Person1 facing slightly right and speaking. The background is blurred but appears to be a street with cars passing by. Second clip: Person2 stands in the same scene, speaking slightly to the left.
+              </td>
+              <th><video preload="none" width="280" src="assets/showcases/mocha_case2.mp4" controls></video></th>
+              <th><video preload="none" width="280" src="assets/showcases/case2.mp4" controls></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class="item item-video4">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Scene description</th>
+              <th style="font-size: 16px">MoCha</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              
+              <td style="font-size: 12px; width: 400px; text-align: left;">
+                Woman(Person1) with short brown hair floating slightly, pale skin tone, wearing a white and blue space suit with a name tag. A man(Person2) with thick, curly black hair, sideburns, a prominent forehead, and pale skin tone, wearing a similar space suit. First clip: Person1 near a circular window inside a space station, facing slightly right, speaking with mouth open to the right. Earth is visible in the background through the window, slowly rotating. Second clip: Person2 is in the same spaceship, facing slightly left and speaking to Person1. Person1 is out of focus in the background. Behind Person2, equipment panels and blinking lights can be seen.
+              </td>
+              <th><video preload="none" width="280" src="assets/showcases/mocha_case4.mp4" controls></video></th>
+              <th><video preload="none" width="280" src="assets/showcases/case4.mp4" controls></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+      </div>
+      <div style="max-width: 1000px; margin: 0 auto;" class="has-text-justified">
+        Videos: Comparision of dialogue videos generated by MoCha and our method. Our method generates longer, multi-turn dialogue videos compared to MoCha. We use lip-sync from <a href="https://cloud.tencent.com/document/product/1240/116222">Tencent Cloud</a> and <a href="https://github.com/FunAudioLLM/CosyVoice">CosyVoise</a> for Text-to-Speech (TTS).
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Comparing storyboards generation with state-of-the-art methods</h2>
+      <img style="max-width: 1000px;" src="assets/figs/cmp.png" />
+      <div style="max-width: 1000px; margin: 0 auto;" class="has-text-justified">
+        Figure: Comparison of dual-shot over-the-shoulder images generated by existing methods and our results. (a) Mocha, (b) In-Context LoRA, (c) GPT-4o, (d) Ours. Our result shows better character consistency and shot layout.
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel2 -->
+
+<section class="section hero">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Looping Video Generation</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <!-- begin cmp1 -->
+        <div class="item item-video1">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Reference image</th>
+              <th style="font-size: 16px">I2V + FLF2V playback</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <th><img  width="300" src="assets/ref/bee_cropped_cmu0000025927.jpg" /></th>
+              <th><video  width="300" src="assets/flf2v/bee_cropped_cmu0000025927.jpg_720*1280_20250721_151043.mp4" loop controls muted></video></th>
+              <th><video  width="300" src="assets/loop/bee_cropped_cmu0000025927.jpg_720*1280_20250721_152238.mp4" loop controls muted></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <!-- end cmp1 -->
+        <div class="item item-video1">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Reference image</th>
+              <th style="font-size: 16px">I2V + FLF2V playback</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <th><img  width="300" src="assets/ref/noah_cropped_cmu0000036739.jpg" /></th>
+              <th><video preload="none" width="300" src="assets/flf2v/noah_cropped_cmu0000036739.jpg_720*1280_20250721_160650.mp4" loop controls muted></video></th>
+              <th><video preload="none" width="300" src="assets/loop/noah_cropped_cmu0000036739.jpg_720*1280_20250721_171023.mp4" loop controls muted></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class="item item-video1">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Reference image</th>
+              <th style="font-size: 16px">I2V + FLF2V playback</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <th><img  width="300" src="assets/ref/jon_cropped_13475.jpg" /></th>
+              <th><video preload="none" width="300" src="assets/flf2v/jon_cropped_13475.jpg_720*1280_20250721_154932.mp4" loop controls muted></video></th>
+              <th><video preload="none" width="300" src="assets/loop/jon_cropped_13475.jpg_720*1280_20250721_163710.mp4" loop controls muted></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <!-- begin cmp2 -->
+        <div class="item item-video2">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Reference image</th>
+              <th style="font-size: 16px">I2V + FLF2V playback</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <th><img  width="300" src="assets/ref/angelica_cropped_134847.jpg" /></th>
+              <th><video preload="none" width="300" src="assets/flf2v/angelica_cropped_134847.jpg_720*1280_20250721_150624.mp4" loop controls muted></video></th>
+              <th><video preload="none" width="300" src="assets/loop/angelica_cropped_134847.jpg_720*1280_20250721_151419.mp4" loop controls muted></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <!-- end cmp2 -->
+        <!-- begin cmp3 -->
+        <div class="item item-video3">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Reference image</th>
+              <th style="font-size: 16px">I2V + FLF2V playback</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <th><img  width="300" src="assets/ref/almaram_cropped_120303.jpg" /></th>
+              <th><video preload="none" width="300" src="assets/flf2v/almaram_cropped_120303.jpg_720*1280_20250721_150211.mp4" loop controls muted></video></th>
+              <th><video preload="none" width="300" src="assets/loop/almaram_cropped_120303.jpg_720*1280_20250721_150615.mp4" loop controls muted></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <!-- end cmp3 -->
+        <!-- begin cmp4 -->
+        <div class="item item-video4">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Reference image</th>
+              <th style="font-size: 16px">I2V + FLF2V playback</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <th><img  width="300" src="assets/ref/chemistry_cropped_68329.jpg" /></th>
+              <th><video preload="none" width="300" src="assets/flf2v/chemistry_cropped_68329.jpg_720*1280_20250721_151503.mp4" loop controls muted></video></th>
+              <th><video preload="none" width="300" src="assets/loop/chemistry_cropped_68329.jpg_720*1280_20250721_153057.mp4" loop controls muted></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <!-- end cmp4 -->
+        <!-- begin cmp5 -->
+        <div class="item item-video5">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Reference image</th>
+              <th style="font-size: 16px">I2V + FLF2V playback</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <th><img  width="300" src="assets/ref/colbert_cropped_cmu0000012687.jpg" /></th>
+              <th><video preload="none" width="300" src="assets/flf2v/colbert_cropped_cmu0000012687.jpg_720*1280_20250721_151922.mp4" loop controls muted></video></th>
+              <th><video preload="none" width="300" src="assets/loop/colbert_cropped_cmu0000012687.jpg_720*1280_20250721_153915.mp4" loop controls muted></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <!-- end cmp5 -->
+        <!-- begin cmp6 -->
+        <div class="item item-video6">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Reference image</th>
+              <th style="font-size: 16px">I2V + FLF2V playback</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <th><img  width="300" src="assets/ref/conan_cropped_119062.jpg" /></th>
+              <th><video preload="none" width="300" src="assets/flf2v/conan_cropped_119062.jpg_720*1280_20250721_152342.mp4" loop controls muted></video></th>
+              <th><video preload="none" width="300" src="assets/loop/conan_cropped_119062.jpg_720*1280_20250721_154734.mp4" loop controls muted></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <!-- end cmp6 -->
+        <div class="item item-video1">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Reference image</th>
+              <th style="font-size: 16px">I2V + FLF2V playback</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <th><img  width="300" src="assets/ref/corden_cropped_cmu0000021363.jpg" /></th>
+              <th><video preload="none" width="300" src="assets/flf2v/corden_cropped_cmu0000021363.jpg_720*1280_20250721_152802.mp4" loop controls muted></video></th>
+              <th><video preload="none" width="300" src="assets/loop/corden_cropped_cmu0000021363.jpg_720*1280_20250721_155552.mp4" loop controls muted></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class="item item-video1">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Reference image</th>
+              <th style="font-size: 16px">I2V + FLF2V playback</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <th><img  width="300" src="assets/ref/ellen_cropped_22916.jpg" /></th>
+              <th><video preload="none" width="300" src="assets/flf2v/ellen_cropped_22916.jpg_720*1280_20250721_153222.mp4" loop controls muted></video></th>
+              <th><video preload="none" width="300" src="assets/loop/ellen_cropped_22916.jpg_720*1280_20250721_160410.mp4" loop controls muted></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class="item item-video1">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Reference image</th>
+              <th style="font-size: 16px">I2V + FLF2V playback</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <th><img  width="300" src="assets/ref/fallon_cropped_cmu0000005525.jpg" /></th>
+              <th><video preload="none" width="300" src="assets/flf2v/fallon_cropped_cmu0000005525.jpg_720*1280_20250721_153641.mp4" loop controls muted></video></th>
+              <th><video preload="none" width="300" src="assets/loop/fallon_cropped_cmu0000005525.jpg_720*1280_20250721_161228.mp4" loop controls muted></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class="item item-video1">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Reference image</th>
+              <th style="font-size: 16px">I2V + FLF2V playback</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <th><img  width="300" src="assets/ref/ferguson_cropped_cmu0000032095.jpg" /></th>
+              <th><video preload="none" width="300" src="assets/flf2v/ferguson_cropped_cmu0000032095.jpg_720*1280_20250721_154054.mp4" loop controls muted></video></th>
+              <th><video preload="none" width="300" src="assets/loop/ferguson_cropped_cmu0000032095.jpg_720*1280_20250721_162033.mp4" loop controls muted></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class="item item-video1">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Reference image</th>
+              <th style="font-size: 16px">I2V + FLF2V playback</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <th><img  width="300" src="assets/ref/huckabee_cropped_cmu0000002213.jpg" /></th>
+              <th><video preload="none" width="300" src="assets/flf2v/huckabee_cropped_cmu0000002213.jpg_720*1280_20250721_154513.mp4" loop controls muted></video></th>
+              <th><video preload="none" width="300" src="assets/loop/huckabee_cropped_cmu0000002213.jpg_720*1280_20250721_162851.mp4" loop controls muted></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class="item item-video1">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Reference image</th>
+              <th style="font-size: 16px">I2V + FLF2V playback</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <th><img  width="300" src="assets/ref/lec_law_cropped_cmu0000027607.jpg" /></th>
+              <th><video preload="none" width="300" src="assets/flf2v/lec_law_cropped_cmu0000027607.jpg_720*1280_20250721_155352.mp4" loop controls muted></video></th>
+              <th><video preload="none" width="300" src="assets/loop/lec_law_cropped_cmu0000027607.jpg_720*1280_20250721_164528.mp4" loop controls muted></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class="item item-video1">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Reference image</th>
+              <th style="font-size: 16px">I2V + FLF2V playback</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <th><img  width="300" src="assets/ref/maher_cropped_cmu0000000871.jpg" /></th>
+              <th><video preload="none" width="300" src="assets/flf2v/maher_cropped_cmu0000000871.jpg_720*1280_20250721_155812.mp4" loop controls muted></video></th>
+              <th><video preload="none" width="300" src="assets/loop/maher_cropped_cmu0000000871.jpg_720*1280_20250721_165346.mp4" loop controls muted></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class="item item-video1">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Reference image</th>
+              <th style="font-size: 16px">I2V + FLF2V playback</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <th><img  width="300" src="assets/ref/minhaj_cropped_cmu0000025398.jpg" /></th>
+              <th><video preload="none" width="300" src="assets/flf2v/minhaj_cropped_cmu0000025398.jpg_720*1280_20250721_160231.mp4" loop controls muted></video></th>
+              <th><video preload="none" width="300" src="assets/loop/minhaj_cropped_cmu0000025398.jpg_720*1280_20250721_170204.mp4" loop controls muted></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class="item item-video1">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Reference image</th>
+              <th style="font-size: 16px">I2V + FLF2V playback</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <th><img  width="300" src="assets/ref/oliver_cropped_214837.jpg" /></th>
+              <th><video preload="none" width="300" src="assets/flf2v/oliver_cropped_214837.jpg_720*1280_20250721_161110.mp4" loop controls muted></video></th>
+              <th><video preload="none" width="300" src="assets/loop/oliver_cropped_214837.jpg_720*1280_20250721_171841.mp4" loop controls muted></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class="item item-video1">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Reference image</th>
+              <th style="font-size: 16px">I2V + FLF2V playback</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <th><img  width="300" src="assets/ref/seth_cropped_4998.jpg" /></th>
+              <th><video preload="none" width="300" src="assets/flf2v/seth_cropped_4998.jpg_720*1280_20250721_161530.mp4" loop controls muted></video></th>
+              <th><video preload="none" width="300" src="assets/loop/seth_cropped_4998.jpg_720*1280_20250721_172659.mp4" loop controls muted></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class="item item-video1">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Reference image</th>
+              <th style="font-size: 16px">I2V + FLF2V playback</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <th><img  width="300" src="assets/ref/shelly_cropped_1515.jpg" /></th>
+              <th><video preload="none" width="300" src="assets/flf2v/shelly_cropped_1515.jpg_720*1280_20250721_161949.mp4" loop controls muted></video></th>
+              <th><video preload="none" width="300" src="assets/loop/shelly_cropped_1515.jpg_720*1280_20250721_173518.mp4" loop controls muted></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class="item item-video1">
+          <table  width="1000" align="center"><tbody>
+            <tr>
+              <th style="font-size: 16px">Reference image</th>
+              <th style="font-size: 16px">I2V + FLF2V playback</th>
+              <th style="font-size: 16px">ShoulderShot (ours)</th>
+            </tr>
+            <tr>
+              <th><img  width="300" src="assets/ref/ytch_prof_cropped_cmu0000031432.jpg" /></th>
+              <th><video preload="none" width="300" src="assets/flf2v/ytch_prof_cropped_cmu0000031432.jpg_720*1280_20250721_162408.mp4" loop controls muted></video></th>
+              <th><video preload="none" width="300" src="assets/loop/ytch_prof_cropped_cmu0000031432.jpg_720*1280_20250721_174336.mp4" loop controls muted></video></th>
+            </tr>
+          </tbody></table>
+        </div>
+      </div>
+      <div style="max-width: 1000px; margin: 0 auto;" class="has-text-justified">
+        Videos: Looping video generation results. No audio; for practical use, we can add dialogue audio using TTS and lip-sync like LatentSync or MuseTalk.
+      </div>
+
+      <div style="margin-top: 1.5rem; margin-bottom: 0.5rem;">
+        <h3 class="title is-4 has-text-justified" style="max-width: 1000px; display: block; margin: 0 auto;">Quantitative Results</h3>
+      </div>
+      <table align="center">
+        <thead>
+          <tr style="padding: 2px; border-bottom: 1px solid #ccc;">
+            <th style="text-align:left">Method</th>
+            <th style="padding: 0 16px;">FVD↓</th>
+            <th style="padding: 0 16px;">FID-VID↓</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <td style="text-align:left">I2V with reverse playback</td>
+              <td>368</td>
+              <td>3.12</td>
+          </tr>
+          <tr>
+              <td style="text-align:left">I2V with FLF2V playback</td>
+              <td>378</td>
+              <td>3.42</td>
+          </tr>
+          <tr>
+              <td style="text-align:left">Loop denoising (ours)</td>
+              <td><b>284</b></td>
+              <td><b>2.35</b></td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="max-width: 1000px; margin: 12px auto 0;" class="has-text-justified">
+        Table: Quantitative comparison of loop video generation strategies: reversed vs. first-Last frame (FLF2V) playback and loop denoising (ours). Metrics include Fréchet Distance metrics FVD and FID-VID. Lower is better.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section> -->
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  <script>
+    const videoContainer = document.querySelector('.video-container');
+    const video = document.querySelector('video');
+    const hoverImage = document.querySelector('.hover-image');
+    const caption = document.querySelector('.caption');
+    
+    videoContainer.addEventListener('mouseenter', () => {
+    // video.pause();
+    hoverImage.style.display = 'block';
+    caption.style.display = 'block';
+  });
+  
+  videoContainer.addEventListener('mouseleave', () => {
+        // video.play();
+        hoverImage.style.display = 'none';
+        caption.style.display = 'none';
+    });
+
+    </script>
+  </html>
